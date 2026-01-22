@@ -1,7 +1,7 @@
 alert("Bem-vindo(a) ao Game do Número Secreto.");
 let numeroSecreto = 7;
 let palpite;
-let tentativas = 1;
+let tentativas = 1; //a primeira tentativa já está sendo feita quando o usuário insere o número.
 
 while (palpite != numeroSecreto) {
     let palpite = prompt("Escolha um número entre 1 e 20:");
@@ -24,9 +24,13 @@ while (palpite != numeroSecreto) {
     }
 }
 
-if (tentativas > 1) {
-    alert(`Parabéns! Você acertou o número secreto: ${numeroSecreto}, com ${tentativas} tentativas.`);
-}
-else {
-    alert(`Parabéns! Você acertou o número secreto: ${numeroSecreto}, com ${tentativas} tentativa.`);
-}
+let palavraTentativa = tentativas > 1 ? "tentativas" : "tentativa";
+
+alert(`Parabéns! Você acertou o número secreto: ${numeroSecreto}, com ${tentativas} ${palavraTentativa}.`);
+
+//if (tentativas > 1) {
+//    alert(`Parabéns! Você acertou o número secreto: ${numeroSecreto}, com ${tentativas} tentativas.`);
+//}
+//else {
+//    alert(`Parabéns! Você acertou o número secreto: ${numeroSecreto}, com ${tentativas} tentativa.`);
+//}
