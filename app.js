@@ -1,5 +1,5 @@
 alert("Bem-vindo(a) ao Game do Número Secreto.");
-let numeroSecreto = 7;
+let numeroSecreto = parseInt(Math.random() * 20) + 1; //número aleatório entre 1 e 20.
 let palpite;
 let tentativas = 1; //a primeira tentativa já está sendo feita quando o usuário insere o número.
 
