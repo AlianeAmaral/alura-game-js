@@ -1,13 +1,16 @@
 alert("Bem-vindo(a) ao Game do Número Secreto.");
 let numeroSecreto = 7;
 let palpite;
+let tentativas = 1;
 
 while (palpite != numeroSecreto) {
     let palpite = prompt("Escolha um número entre 1 e 20:");
 
     if (numeroSecreto == palpite) {
-        alert(`Parabéns! Você acertou o número secreto: ${numeroSecreto}.`);
+        //o break fará com que se o usuário acertar na primeira tentativa, ele vai para fora do while.
+        break;
     }
+    //aqui é certeza que o usuário errou.
     else {
         if (palpite < numeroSecreto) {
             alert(`O número secreto é maior do que ${palpite}.`)
@@ -15,5 +18,15 @@ while (palpite != numeroSecreto) {
         else {
             alert(`O número secreto é menor do que ${palpite}.`)
         }
+
+        //tentativas = tentativas + 1; é o mesmo que está abaixo.
+        tentativas++
     }
+}
+
+if (tentativas > 1) {
+    alert(`Parabéns! Você acertou o número secreto: ${numeroSecreto}, com ${tentativas} tentativas.`);
+}
+else {
+    alert(`Parabéns! Você acertou o número secreto: ${numeroSecreto}, com ${tentativas} tentativa.`);
 }
