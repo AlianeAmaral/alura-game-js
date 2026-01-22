@@ -8,5 +8,12 @@ if (numeroSecreto == palpite) {
 }
 
 else {
-    alert(`Que pena! Você errou. O número secreto era: ${numeroSecreto}.`);  
+    if (palpite < numeroSecreto) {
+        alert(`O número secreto é maior do que ${palpite}.`)
+    }
+    else {
+        alert(`O número secreto é menor do que ${palpite}.`)
+    }
+
+    
 }
